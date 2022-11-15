@@ -8,13 +8,13 @@ def get_weight(gamedata,ref_data):
   if gamedata['is_free'] == ref_data['is_free']:
     weight += 1
 
-  if not isNull(gamedata['genres']):
+  if not isNull(gamedata['genres']) and not isNull(ref_data['genres']):
     for gen_jogo in gamedata['genres']:
         for gen_comp in ref_data['genres']:
           if gen_jogo.get('id') == gen_comp.get('id'):
             weight += 1
 
-  if not isNull(gamedata['categories']):
+  if not isNull(gamedata['categories']) and not isNull(ref_data['categories']):
     for cat_jogo in gamedata['categories']:
         for cat_comp in ref_data['categories']:
           if cat_jogo.get('id') == cat_comp.get('id'):
@@ -29,7 +29,7 @@ def isNull(value):
     return False
 
 def get_connections(jogo_ref,jogos_visitados):
-  connections_count = 5
+  connections_count = 3
   g = {
       'similar_games': []
     }
@@ -48,8 +48,8 @@ def get_connections(jogo_ref,jogos_visitados):
 
     if game_appid in appid_visitados:
       continue
-
-    ref_data = get_game(jogo_ref[0])
+    
+    ref_data = get_game(jogo_ref)
 
     connection = {
       'id': game_appid,
@@ -83,7 +83,7 @@ def get_game(appid):
   db.close()
 
 
-def dfs_iterativa(game_appid):
+def dfs_iterativa(game_appid, max_layer=3):
   layer = 0
   falta_visitar = [[game_appid, layer]]
   visitados = []
@@ -97,18 +97,49 @@ def dfs_iterativa(game_appid):
       'layer': layer
     }
   )
+
+  edges = []
   while falta_visitar:
-    v = falta_visitar.pop()
-    # print(v)
+    v, layer = falta_visitar.pop()
     g = get_connections(v,visitados)
-    print(g)
-    break
+
+    if layer >= max_layer:
+      continue
+  
+    appid_visitados = []
+    for count in range(len(visitados)):
+      appid_visitados.append(str(visitados[count].get('appid')))
+    
+    for vizinho in g['similar_games']:
+      if vizinho['id'] not in appid_visitados:
+        visitados.insert(0,
+          {
+            'appid': vizinho['id'],
+            'title': get_game(vizinho['id']).get('name'),
+            'genres': get_game(vizinho['id']).get('genres'),
+            'categories': get_game(vizinho['id']).get('categories'),
+            'img': get_game(vizinho['id']).get('header_image'),
+            'layer': layer+1
+          }
+        )
+        falta_visitar.append([vizinho['id'], layer+1])
+        edges.append(
+          {
+            'from': v,
+            'to': vizinho['id']
+          }
+        )
+
+  return {
+    'nodes': visitados,
+    'edges': edges
+  }
 
 # testing functions
-if __name__ == '__main__':
+# if __name__ == '__main__':
   # game = get_game(1602010)
   # print(game.get('name'))
-  dfs_iterativa(1602010)
+  # dfs_iterativa(1602010)
 
 
 # A fazer...
