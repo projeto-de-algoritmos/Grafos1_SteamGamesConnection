@@ -1,6 +1,7 @@
 import React from 'react';
 import TextField from '@mui/material/TextField';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { FaSteam } from 'react-icons/fa';
 import './index.css';
 
 const Header = () => {
@@ -23,7 +24,7 @@ const Header = () => {
     return (
         <div className='header-container'>
             <div className="header-title">
-                <h1>Steam Gamer Connection</h1>
+                <h1>Steam Games Connection <FaSteam /></h1>
             </div>
 
             <div className="header-content">
