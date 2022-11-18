@@ -1,0 +1,24 @@
+.item-container {
+    width: 100%;
+    background-color: #eaeaea;
+    padding: 10px 5px;
+    border: 2px solid #fff;
+}
+
+.item-container :hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+    cursor: pointer;
+ }
+
+.centraliza {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.centraliza-vertical {
+    display: flex;
+    vertical-align: center;
+}
+

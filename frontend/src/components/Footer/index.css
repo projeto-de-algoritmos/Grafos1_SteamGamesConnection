@@ -1,0 +1,28 @@
+.footer {
+    border-top: 3px solid #fff;
+    padding-top: 50px;
+    height: 300px;
+    margin-top: 20px;
+    background-color: #036564;
+}
+
+.footer-tittle {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #cdb380;
+    padding-bottom: 20px;
+}
+
+.collaborator-name {
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding: 0px;
+    margin: 0px !important;
+}
+
+
+.footer p {
+    color: #B8B8B8;
+    letter-spacing: 0.5px;
+}
