@@ -1,8 +1,9 @@
 import json
 import time # testing time
+from definitions import DB_PATH
 
 def get_name(name):
-  db = open('backend/db/db.txt')
+  db = open(f'{DB_PATH}')
 
   name = name.upper()
   gamelist = []
@@ -64,7 +65,7 @@ def get_connections(jogo_ref,jogos_visitados):
       'similar_games': []
     }
   
-  db = open('backend/db/db.txt', 'r')
+  db = open(f'{DB_PATH}', 'r')
   
   for line in db.readlines():
     gameinfo = json.loads(line)
