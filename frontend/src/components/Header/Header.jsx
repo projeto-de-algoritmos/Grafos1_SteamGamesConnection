@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useState, useContext } from 'react';
+import { DisplayGamesContext } from '../../context/games.context';
 import TextField from '@mui/material/TextField';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { FaSteam } from 'react-icons/fa';
 import './index.css';
 
 const Header = () => {
+
+    const { selectedGame, setSelectedGame } = useContext(DisplayGamesContext);
 
     const theme = createTheme({
         status: {
@@ -19,6 +22,7 @@ const Header = () => {
 
     const handleInput = (e) => {
         console.log("Event.target.value: ", e);
+        setSelectedGame(e);
     }
 
     return (
