@@ -1,6 +1,36 @@
 import json
 import time # testing time
 
+def get_name(name):
+  db = open('backend/db/db.txt')
+
+  name = name.upper()
+  gamelist = []
+  count = 0
+
+  for line in db.readlines():
+    gameinfo = json.loads(line)
+    game_appid = next(iter(gameinfo))
+    gamedata = gameinfo[game_appid]
+
+    if name in gamedata['name'].upper():
+      gamelist.append(
+        {
+          'value': game_appid,
+          'label': gamedata['name'],
+        }
+      )
+      count += 1
+      if count >=5:
+        break
+
+  db.close()
+  return json.dumps(gamelist)
+
+
+
+  return name
+
 def get_weight(gamedata,ref_data):
   weight = 0
   if gamedata['required_age'] == ref_data['required_age']:
@@ -140,6 +170,7 @@ def dfs_iterativa(game_appid, max_layer=3):
   # game = get_game(1602010)
   # print(game.get('name'))
   # dfs_iterativa(1602010)
+  # print(get_name('Persona'))
 
 
 # A fazer...

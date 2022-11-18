@@ -5,9 +5,9 @@ import dfs as dfs
 app = Flask(__name__)
 CORS(app)
 
-@app.route('/')
-def main():
-  return "Minha pagina Flask"
+@app.route('/search/<name>')
+def main(name):
+  return dfs.get_name(name)
 
 @app.route('/dfs/<appid>')
 def search_connections(appid):
