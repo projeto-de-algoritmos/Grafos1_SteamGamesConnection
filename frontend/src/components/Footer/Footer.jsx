@@ -4,26 +4,25 @@ import './index.css';
 
 const Footer = () => {
     return (
-        <footer className="footer">
+        <footer className="footer mt-3">
             <Container>
                 <Row>
-                    <Col sm={12} className="text-center">
+                    <div className=" col-12 text-start">
                         <p className="footer-tittle">Steam Games Connection <FaSteam /></p>
-                    </Col>
-                    <Col size={12} sm={6}>
+                    </div>
+                    <div className="col-6 pt-5">
                         <div className="collaborators">
-                            <p>
+                            <p className="collaborator-name">
                                 Victor Samuel dos Santos Lucas
                             </p>
-                            <p>
+                            <p className="collaborator-name">
                                 Vinícius Vieira de Souza
                             </p>
-
                         </div>
-                    </Col>
-                    <Col size={12} sm={6} className="text-center text-sm-end">
+                    </div>
+                    <div className="text-center col-6 pt-5">
                         <p>Copyright 2022. All Rights Reserved</p>
-                    </Col>
+                    </div>
                 </Row>
             </Container>
         </footer>

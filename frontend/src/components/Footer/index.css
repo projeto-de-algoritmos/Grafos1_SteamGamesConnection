@@ -13,17 +13,16 @@
     padding-bottom: 20px;
 }
 
-.collaborators p{
+.collaborator-name {
     color: #fff;
-    font-size: 2rem;
+    font-size: 1.4rem;
     font-weight: 600;
+    padding: 0px;
+    margin: 0px !important;
 }
 
 
 .footer p {
-    font-weight: 400;
-    font-size: 14px;
     color: #B8B8B8;
     letter-spacing: 0.5px;
-    margin-top: 20px;
 }
