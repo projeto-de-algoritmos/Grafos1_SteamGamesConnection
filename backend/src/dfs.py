@@ -3,7 +3,7 @@ import time # testing time
 from definitions import DB_PATH
 
 def get_name(name):
-  db = open(f'{DB_PATH}')
+  db = open(f'{DB_PATH}', 'r')
 
   name = name.upper()
   gamelist = []
@@ -99,7 +99,7 @@ def get_connections(jogo_ref,jogos_visitados):
   return g
 
 def get_game(appid):
-  db = open('backend/db/db.txt', 'r')
+  db = open(f'{DB_PATH}', 'r')
 
   for line in db.readlines():
     gameinfo = json.loads(line)
