@@ -13,12 +13,8 @@
 
 .centraliza {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
-.centraliza-vertical {
-    display: flex;
-    vertical-align: center;
-}
 

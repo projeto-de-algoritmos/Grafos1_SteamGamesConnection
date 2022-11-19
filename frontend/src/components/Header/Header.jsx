@@ -1,5 +1,6 @@
 import React, { useState, useContext } from 'react';
 import { DisplayGamesContext } from '../../context/games.context';
+import { SearchGameByName } from '../../services/steam.service';
 import TextField from '@mui/material/TextField';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { FaSteam } from 'react-icons/fa';
@@ -7,7 +8,7 @@ import './index.css';
 
 const Header = () => {
 
-    const { selectedGame, setSelectedGame } = useContext(DisplayGamesContext);
+    const { selectedGame, setSelectedGame, displayGames, setDisplayGames } = useContext(DisplayGamesContext);
 
     const theme = createTheme({
         status: {
@@ -20,9 +21,10 @@ const Header = () => {
         },
     });
 
-    const handleInput = (e) => {
-        console.log("Event.target.value: ", e);
-        setSelectedGame(e);
+    const handleInput = async (e) => {
+        let search_games = await SearchGameByName(e);
+        console.log(search_games)
+        setDisplayGames(search_games.data);
     }
 
     return (

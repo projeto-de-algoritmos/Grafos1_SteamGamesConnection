@@ -1,16 +1,16 @@
 import React from 'react';
 import './index.css';
 
-const Item = () => {
+const Item = ({ id, name }) => {
 
     return (
-        <div className="item-container centraliza-vertical">
+        <div className="item-container mt-2">
             <div className="row">
                 <div className="col-8 centraliza">
-                    Nome do Jogo
+                    {name}
                 </div>
                 <div className="col-4 centraliza">
-                    Imagem do jogo
+                    {id}
                 </div>
             </div>
         </div>
