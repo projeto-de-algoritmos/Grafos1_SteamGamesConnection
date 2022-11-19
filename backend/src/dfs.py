@@ -1,9 +1,12 @@
 import json
 import time # testing time
-from definitions import DB_PATH
+from definitions import DB_PATH1, DB_PATH2
 
 def get_name(name):
-  db = open(f'{DB_PATH}', 'r')
+  try:
+    db = open(f'{DB_PATH1}', 'r')
+  except:
+    db = open(f'{DB_PATH2}', 'r')
 
   name = name.upper()
   gamelist = []
@@ -65,7 +68,10 @@ def get_connections(jogo_ref,jogos_visitados):
       'similar_games': []
     }
   
-  db = open(f'{DB_PATH}', 'r')
+  try:
+    db = open(f'{DB_PATH1}', 'r')
+  except:
+    db = open(f'{DB_PATH2}', 'r')
   
   for line in db.readlines():
     gameinfo = json.loads(line)
@@ -99,7 +105,10 @@ def get_connections(jogo_ref,jogos_visitados):
   return g
 
 def get_game(appid):
-  db = open(f'{DB_PATH}', 'r')
+  try:
+    db = open(f'{DB_PATH1}', 'r')
+  except:
+    db = open(f'{DB_PATH2}', 'r')
 
   for line in db.readlines():
     gameinfo = json.loads(line)
