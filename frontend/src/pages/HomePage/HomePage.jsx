@@ -13,7 +13,6 @@ const HomePage = () => {
     const [details, setDetails] = useState();
 
     const handleSelectedGame = async (game) => {
-        console.log("item selecionado")
         setSelectedGame(game);
         const game_details = await SearchGameDetailsById(game.value);
         setDetails(game_details.data);
