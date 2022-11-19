@@ -121,7 +121,7 @@ def dfs_iterativa(game_appid, max_layer=3):
   visitados.append(
     {
       'id': game_appid,
-      'title': get_game(game_appid).get('name'),
+      'label': get_game(game_appid).get('name'),
       'genres': get_game(game_appid).get('genres'),
       'categories': get_game(game_appid).get('categories'),
       'img': get_game(game_appid).get('header_image'),
@@ -146,7 +146,7 @@ def dfs_iterativa(game_appid, max_layer=3):
         visitados.insert(0,
           {
             'id': vizinho['id'],
-            'title': get_game(vizinho['id']).get('name'),
+            'label': get_game(vizinho['id']).get('name'),
             'genres': get_game(vizinho['id']).get('genres'),
             'categories': get_game(vizinho['id']).get('categories'),
             'img': get_game(vizinho['id']).get('header_image'),
