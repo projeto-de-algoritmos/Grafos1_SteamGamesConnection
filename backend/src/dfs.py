@@ -75,7 +75,7 @@ def get_connections(jogo_ref,jogos_visitados):
 
     appid_visitados = []
     for count in range(len(jogos_visitados)):
-      appid_visitados.append(str(jogos_visitados[count].get('appid')))
+      appid_visitados.append(str(jogos_visitados[count].get('id')))
 
     if game_appid in appid_visitados:
       continue
@@ -120,7 +120,7 @@ def dfs_iterativa(game_appid, max_layer=3):
   visitados = []
   visitados.append(
     {
-      'appid': game_appid,
+      'id': game_appid,
       'title': get_game(game_appid).get('name'),
       'genres': get_game(game_appid).get('genres'),
       'categories': get_game(game_appid).get('categories'),
@@ -139,13 +139,13 @@ def dfs_iterativa(game_appid, max_layer=3):
   
     appid_visitados = []
     for count in range(len(visitados)):
-      appid_visitados.append(str(visitados[count].get('appid')))
+      appid_visitados.append(str(visitados[count].get('id')))
     
     for vizinho in g['similar_games']:
       if vizinho['id'] not in appid_visitados:
         visitados.insert(0,
           {
-            'appid': vizinho['id'],
+            'id': vizinho['id'],
             'title': get_game(vizinho['id']).get('name'),
             'genres': get_game(vizinho['id']).get('genres'),
             'categories': get_game(vizinho['id']).get('categories'),
