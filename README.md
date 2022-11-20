@@ -39,7 +39,7 @@ O projeto em questão se trata de uma aplicação que por meio de uma busca por 
 
 ### Requisitos:
 - Python: Versão 3+
-- Node: Versão 12+
+- Node: Versão 16+
 - Npm: Versão 6+
 
 ## Uso 
