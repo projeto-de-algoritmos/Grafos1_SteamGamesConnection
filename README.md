@@ -74,3 +74,13 @@ Caso não abra automáticamente, para acessar a aplicação abra seu navegador n
 
 ## OBS:
 - O backend e frontend fazem uso respectivamente das portas:  http://localhost:5000 e http://localhost:3000, dessa forma certifique-se de que estejam livres para rodar a aplicação.
+\
+
+## Vídeo de apresentação 
+
+- Acesse pelo [Sharepoint](https://unbbr.sharepoint.com/sites/PA-Gravaes/Documentos%20Compartilhados/General/Recordings/Grava%C3%A7%C3%A3o%20PA_GRAFOS01-20221120_153037-Grava%C3%A7%C3%A3o%20de%20Reuni%C3%A3o.mp4?web=1)
+
+- Clique [aqui](/public/assets/video_01.mp4) para baixar o vídeo.
+
+- Caso nenhuma das opções esteja disponível, o vídeo encontrasse dentro do repositório no caminho "public/assets/video_01.mp4".
+
