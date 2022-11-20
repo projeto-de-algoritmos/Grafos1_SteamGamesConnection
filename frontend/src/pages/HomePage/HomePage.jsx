@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { DisplayGamesContext } from '../../context/games.context';
 import { SearchGameDetailsById } from '../../services/steam.service';
 import Item from '../../components/Item';
-import options from '../../VisOptions';
+import options from '../../styles/VisOptions';
 import './index.css';
 
 const HomePage = () => {
@@ -41,6 +41,9 @@ const HomePage = () => {
                     </div>
                 </div>
                 <div className="col-8 text-center homepage-content">
+                    <div className="graph-tittle">
+                        <h2>{selectedGame ? selectedGame.label : 'Busque e Selecione um jogo'}</h2>
+                    </div>
                     <Graph
                         key={uuidv4()}
                         graph={details}

@@ -1,22 +1,23 @@
 const edges = {
     arrows: {
         to: {
-            enabled: true
+            enabled: false
         },
     },
-    color: 'blue',
+    color: '#036564',
     physics: false,
-    length: 100,
+    length: 50,
 }
 
 const nodes = {
-    shape: 'box',
+    shape: 'hexagon',
+    parseColor: true,
+    color: '#036564',
     shapeProperties: {
         borderRadius: 6,
     },
-    // physics: false,
     font: {
-        color: 'black',
+        color: '#cdb380',
         size: 20
     }
 }
@@ -32,15 +33,15 @@ const layout = {
 }
 
 const groups = {
-    0: {color: '#C5FFCC'},
-    1: {color: '#97D2DE'},
-    2: {color: '#BDB3F5'},
-    3: {color: '#DE97C8'},
-    4: {color: '#FFC9AD'},
+    0: {color: '#036564'},
+    1: {color: '#036564'},
+    2: {color: '#036564'},
+    3: {color: '#036564'},
+    4: {color: '#036564'},
 }
 
 const style = {
-    height: '100%',
+    height: '90%',
     width: '100%',
 }
 

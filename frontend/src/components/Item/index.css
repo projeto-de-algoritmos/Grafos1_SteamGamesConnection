@@ -6,9 +6,9 @@
 }
 
 .item-container :hover{
-    transform: scale(1.1);
     transition: 0.5s;
     cursor: pointer;
+    color: #cdb380;
  }
 
 .centraliza {
