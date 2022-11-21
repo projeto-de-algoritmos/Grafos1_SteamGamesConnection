@@ -78,9 +78,9 @@ Caso não abra automáticamente, para acessar a aplicação abra seu navegador n
 
 ## Vídeo de apresentação 
 
-- Acesse pelo [Sharepoint](https://unbbr.sharepoint.com/sites/PA-Gravaes/Documentos%20Compartilhados/General/Recordings/Grava%C3%A7%C3%A3o%20PA_GRAFOS01-20221120_153037-Grava%C3%A7%C3%A3o%20de%20Reuni%C3%A3o.mp4?web=1)
+- Acesse pelo [Sharepoint](https://unbbr.sharepoint.com/sites/PA-Gravaes/_layouts/15/stream.aspx?id=%2Fsites%2FPA%2DGravaes%2FDocumentos%20Compartilhados%2FGeneral%2FRecordings%2FGrava%C3%A7%C3%A3o%20PA%5FGRAFOS01%2D20221120%5F151502%2DGrava%C3%A7%C3%A3o%20de%20Reuni%C3%A3o%2Emp4)
 
-- Clique [aqui](/public/assets/video_01.mp4) para baixar o vídeo.
+- Clique [aqui](/public/assets/video_02.mp4) para baixar o vídeo.
 
 - Caso nenhuma das opções esteja disponível, o vídeo encontrasse dentro do repositório no caminho "public/assets/video_02.mp4".
 
