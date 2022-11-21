@@ -1,7 +1,7 @@
 import React from 'react';
 import './index.css';
 
-const Item = ({ id, name }) => {
+const Item = ({ id, name, img }) => {
 
     return (
         <div className="item-container mt-2">
@@ -10,7 +10,7 @@ const Item = ({ id, name }) => {
                     {name}
                 </div>
                 <div className="col-4 centraliza">
-                    {id}
+                    <img src={img} alt="Imagem do jogo" />
                 </div>
             </div>
         </div>

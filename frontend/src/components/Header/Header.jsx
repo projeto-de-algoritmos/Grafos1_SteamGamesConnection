@@ -23,7 +23,7 @@ const Header = () => {
 
     const handleInput = async (e) => {
         let search_games = await SearchGameByName(e);
-        console.log(search_games)
+        console.log("SEARCH GAME -->",search_games)
         setDisplayGames(search_games.data);
     }
 

@@ -22,6 +22,7 @@ def get_name(name):
         {
           'value': game_appid,
           'label': gamedata['name'],
+          'img': gamedata['header_image']
         }
       )
       count += 1

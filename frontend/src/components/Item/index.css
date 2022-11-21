@@ -17,4 +17,7 @@
     align-items: center;
 }
 
-
+.centraliza img {
+    border-radius: 5px;
+    width: 80px;
+}

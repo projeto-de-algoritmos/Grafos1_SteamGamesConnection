@@ -33,6 +33,7 @@ const HomePage = () => {
                                         <Item
                                             id={game.value}
                                             name={game.label}
+                                            img={game.img}
                                         />
                                     </div>
                                 )
