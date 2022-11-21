@@ -82,5 +82,5 @@ Caso não abra automáticamente, para acessar a aplicação abra seu navegador n
 
 - Clique [aqui](/public/assets/video_01.mp4) para baixar o vídeo.
 
-- Caso nenhuma das opções esteja disponível, o vídeo encontrasse dentro do repositório no caminho "public/assets/video_01.mp4".
+- Caso nenhuma das opções esteja disponível, o vídeo encontrasse dentro do repositório no caminho "public/assets/video_02.mp4".
 
